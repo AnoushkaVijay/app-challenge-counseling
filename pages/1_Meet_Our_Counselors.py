@@ -104,11 +104,11 @@ for i in range(len(df)):
         desc=f'## {p} \n### {d}\n {de}'
         col2.image(ur,use_column_width=True)
         col1.markdown(desc)
-        if col2.button("Send Conversation",key=f'button{i}'):
+        if col2.button("Send Chat Summary",key=f'button{i}'):
             g=get_conversation_summary(p, d)
-            send_email(em,'Assistance requested: With conversation log',g)
+            send_email(em,'EducationALLY Chat Summary',g)
            #with st.sidebar.expander(f"Email message sent to {p}"):
                # st.markdown(f"To: {em}.\n Body: {g}")
-            st.write(f"Conversation sent to {p} at {em}")
+            st.write(f"Chat summary sent to {p}")
         st.divider()
         
